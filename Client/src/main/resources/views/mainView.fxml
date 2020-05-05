@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="515.0" prefWidth="787.0" style="-fx-background-color: F9F9F9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+    <children>
+        <TableView fx:id="showsTable" layoutX="17.0" layoutY="64.0" prefHeight="282.0" prefWidth="406.0">
+            <columns>
+                <TableColumn fx:id="sArtistColumn" prefWidth="75.0" text="Artist" />
+                <TableColumn fx:id="sLocationColumn" prefWidth="75.0" text="Locatie" />
+                <TableColumn fx:id="sDateColumn" prefWidth="75.0" text="Data" />
+                <TableColumn fx:id="sSoldColumn" prefWidth="81.60003662109375" text="Loc. vandute" />
+                <TableColumn fx:id="sAvailableColumn" prefWidth="99.20001220703125" text="Loc. disponibile" />
+                <TableColumn fx:id="sIdColumn" prefWidth="99.20001220703125" text="" visible="false" />
+            </columns>
+        </TableView>
+        <TableView fx:id="artistTable" layoutX="446.0" layoutY="86.0" prefHeight="238.0" prefWidth="326.0">
+            <columns>
+                <TableColumn fx:id="aArtistColumn" prefWidth="75.0" text="Artist" />
+                <TableColumn fx:id="aLocationColumn" prefWidth="75.0" text="Locatie" />
+                <TableColumn fx:id="aHourColumn" prefWidth="76.800048828125" text="Ora inceperii" />
+                <TableColumn fx:id="aAvailableColumn" prefWidth="97.60007324218748" text="Loc. disponibile" />
+            </columns>
+        </TableView>
+        <TextField fx:id="buyerNameField" layoutX="130.0" layoutY="391.0" prefHeight="26.0" prefWidth="186.0" />
+        <Label layoutX="21.0" layoutY="395.0" text="Nume cumparator" />
+        <Label layoutX="21.0" layoutY="428.0" text="Numar locuri dorite" />
+        <TextField fx:id="wantedSeatsField" layoutX="130.0" layoutY="423.0" prefHeight="26.0" prefWidth="186.0" />
+        <Label layoutX="494.0" layoutY="395.0" text="Cauta artistii care au spectacol la o anumita ora" />
+        <Label layoutX="451.0" layoutY="427.0" text="Introduceti data" />
+        <DatePicker fx:id="calendar" layoutX="543.0" layoutY="424.0" />
+        <Button layoutX="130.0" layoutY="468.0" mnemonicParsing="false" onAction="#sellAction" style="-fx-background-color: C6B7B7;" text="Generare bilet" />
+        <Button layoutX="585.0" layoutY="468.0" mnemonicParsing="false" onAction="#searchAction" style="-fx-background-color: C6B7B7;" text="Cauta" />
+      <Button  layoutX="619.0" layoutY="30.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Log out" onAction="#logOutAction"/>
+    </children>
+</AnchorPane>
